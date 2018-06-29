@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects',
+        pageInfo: 'View a project from here'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Big fat error happened'
